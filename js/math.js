@@ -38,13 +38,13 @@ startButton.onclick = function() {
 	stopButton.className = ""; // show the stop button
 	startButton.className = "hide"; // hide the start button
 	inputField.focus();
-}
+};
 
 form.onsubmit = function(e) {
 	// need to prevent the default form submission wich reloads the page
 	e.preventDefault();
 	getAnswer();
-}
+};
 
 stopButton.onclick = function() {
 	var resultString;
@@ -74,7 +74,7 @@ stopButton.onclick = function() {
 	response.innerHTML = ""; // clear response in case it was set
 	results.innerHTML = resultString;
 	category.innerHTML = categoryString;
-}
+};
 
 /***** FUNCTIONS ******/
 var refreshNums = function() {
@@ -87,7 +87,7 @@ var refreshNums = function() {
 	q.innerHTML = num2;
 	// Starting timer
 	startTime = new Date();
-}
+};
 
 /*
 * This is called in the onsubmit event
@@ -109,7 +109,7 @@ var getAnswer = function() {
 	}
 	// clear the input field for the next round
 	inputField.value = "";
-}
+};
 
 var getCategory = function(mean) {
 	var c;
@@ -125,5 +125,4 @@ var getCategory = function(mean) {
 		c = "High School Drop Out";
 	}
 	return c;
-}
-
+};
